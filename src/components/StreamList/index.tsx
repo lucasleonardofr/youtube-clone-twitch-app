@@ -1,63 +1,62 @@
 import React from 'react';
-
 import streamThumbnail from '../../images/stream_thumbnail.jpg';
 
-import {
+import { 
   List,
   StreamContainer,
-  StreamRow,
   StreamThumbnail,
   StreamColumn,
+  StreamRow,
   StreamHeader,
   StreamAvatar,
-  StreamUsername,
+  StreamUserName,
   StreamDescription,
   StreamCategory,
   TagRow,
   TagView,
-  TagText,
-} from './styles';
+  TagText
+  
+ } from './styles';
 
 const StreamList: React.FC = () => {
   const StreamItem = () => (
     <StreamContainer>
       <StreamThumbnail source={streamThumbnail} />
 
-      <StreamRow>
-        <StreamColumn>
+      <StreamColumn>
+        <StreamRow>
           <StreamHeader>
             <StreamAvatar />
-            <StreamUsername numberOfLines={1}>rodz_oficial</StreamUsername>
+            <StreamUserName numberOfLines={1}> lucasleonardofr </StreamUserName>
           </StreamHeader>
-
           <StreamDescription numberOfLines={1}>
-            Front-end com Next.js, Chakra UI e GraphQL
+            Clonando Interface do app da Twitch, UI e UX
           </StreamDescription>
 
           <StreamCategory numberOfLines={1}>
             Science & Technology
           </StreamCategory>
-        </StreamColumn>
+        </StreamRow>
 
         <TagRow>
           <TagView>
-            <TagText>Portuguese</TagText>
+            <TagText>Português</TagText>
           </TagView>
           <TagView>
-            <TagText>Web Development</TagText>
+            <TagText>React Native</TagText>
           </TagView>
         </TagRow>
-      </StreamRow>
+      </StreamColumn>
     </StreamContainer>
-  );
+  )
 
   return (
-    <List>
-      <StreamItem />
-      <StreamItem />
-      <StreamItem />
-      <StreamItem />
-    </List>
+   <List>
+     <StreamItem />
+     <StreamItem />
+     <StreamItem />
+     <StreamItem />
+   </List>
   );
 };
 

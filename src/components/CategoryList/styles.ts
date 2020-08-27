@@ -5,10 +5,10 @@ export const List = styled.ScrollView.attrs({
   horizontal: true,
 })`
   padding: 8px 0 24px;
+
 `;
 
 export const CategoryContainer = styled.TouchableOpacity`
-  /* background: purple; */
   margin-right: 10px;
 `;
 
@@ -28,9 +28,11 @@ export const CategoryName = styled.Text`
 export const CategoryStatus = styled.View`
   flex-direction: row;
   align-items: center;
+
 `;
 
 export const RedCircle = styled.View`
+  margin-left: 2px;
   background: ${colors.red};
   width: 9px;
   height: 9px;
